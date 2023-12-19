@@ -1,5 +1,7 @@
 #pragma once
 
+#include<SFML/Graphics.hpp>
+#include<iostream>
 #include "grid_manager.h"
 
 grid_manager::grid_manager()
@@ -26,8 +28,9 @@ auto grid_manager::handle_event(sf::Vector2f e) -> void
 	{
 		if (sprites[i].getGlobalBounds().contains(e))
 		{
-			posInList = 0;
+			posInList = i;
 		}
 	}
+	std::cout << "You pressed position " << posInList << ".\n";
 }
 
