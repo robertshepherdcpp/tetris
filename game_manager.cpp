@@ -1,4 +1,8 @@
+#include<chrono>
+
 #include "game_manager.h"
+
+using namespace std::chrono_literals;
 
 game_manager::game_manager()
 {
@@ -64,4 +68,17 @@ auto game_manager::random_number() -> int
 auto game_manager::print(sf::RenderWindow& window) -> void
 {
 	window.draw(current_sprite);
+}
+
+auto game_manager::update() -> void
+{
+	if ((std::chrono::system_clock::now() - last_time_checked) >= 1s)
+	{
+		last_time_checked = std::chrono::system_clock::now();
+		move_down_one();
+	}
+	else
+	{
+		// there is nothing else to update.
+	}
 }
