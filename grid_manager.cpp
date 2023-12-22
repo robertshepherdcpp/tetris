@@ -4,6 +4,7 @@
 #include<iostream>
 #include "grid_manager.h"
 
+/* Commented out for now becuase I get the error somewhere in my code that: `the term does not evaluate to a function taking 0 arguements`
 grid_manager::grid_manager()
 {
 	copy_texture.loadFromFile("grid_box.png");
@@ -33,4 +34,5 @@ auto grid_manager::handle_event(sf::Vector2f e) -> void
 	}
 	std::cout << "You pressed position " << posInList << ".\n";
 }
+*/
 

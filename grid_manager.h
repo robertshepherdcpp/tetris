@@ -5,6 +5,7 @@
 
 struct grid_manager
 {
+	/* Commented out because of an error
 	grid_manager();
 
 	auto handle_event(sf::Vector2f) -> void;
@@ -13,4 +14,5 @@ struct grid_manager
 
 	sf::Texture copy_texture;
 	sf::Sprite copy_sprite;
+	*/
 };
